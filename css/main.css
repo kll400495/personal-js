@@ -388,28 +388,34 @@ section#portfoliodesign div.wrap div.som {
   overflow: hidden;
 }
 section#portfoliodesign div.wrap div.som div.somcontents {
-  display: flex;
-  width: 800%;
+/*   display: flex;
+  width: 800%; */
 }
 section#portfoliodesign div.wrap div.som div.somcontents div{
-  width: calc(100% / 8);
+/*   width: calc(100% / 8);
   display: flex;
   column-gap: 40px;
   padding-top: 18px;
-  transition: all 1.5s;
+  transition: all 1.5s; */
+position: relative;
 }
 section#portfoliodesign div.wrap div.som div.somcontents div img {
-  width: 700px;
-  padding-left: 335px;
+  width: 788px;
+  /*! padding-left: 335px; */
+  height: 407px;
+  margin: 0 auto;
 }
 section#portfoliodesign div.wrap div.som div.somcontents div h3 {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 1101px;
 }
 section#portfoliodesign div.wrap div.som div.somcontents div h3 span {
   color: #f8a112;
   font-weight: 400;
-  font-size: 43px;
+  font-size: 74px;
 }
 section#portfoliodesign div.wrap div.som span.button{
   
@@ -543,6 +549,8 @@ section#portfoliovideo div.wrap h2 span {
 section#portfoliovideo div.wrap div.video {
   padding-top: 255px;
   overflow: hidden;
+  width: 1402px;
+  margin: 0 auto;
 }
 section#portfoliovideo div.wrap div.video div.videocontents {
   display: flex;
@@ -589,9 +597,10 @@ section#portfoliovideo div.wrap span a:nth-child(2){
 }
 .slick-dotted.slick-slider{
   margin-top: 30px;
+  width: 1274px;
 }
 .slick-slide img{
-  width: 80%;
+  width: 70%;
 }
 .slick-prev, .slick-next{
   z-index: 1;
@@ -600,7 +609,7 @@ section#portfoliovideo div.wrap span a:nth-child(2){
   left: 30px;
 }
 .slick-next{
-  right: 56px;
+  right: 30px;
 }
 .slick-prev::before, .slick-next::before{
   font-size: 45px;
@@ -614,6 +623,9 @@ section#portfoliovideo div.wrap span a:nth-child(2){
 .slick-dots{
 }
 .slick-dots li button{
+}
+.slick-initialized .slick-slide{
+  
 }
 /* ...........contact......... */
 section#contact {
