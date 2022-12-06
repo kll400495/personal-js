@@ -40,35 +40,35 @@
                 c7p=$("#portfoliovideo").offset().top;
                 c8p=$("#contact").offset().top;
                 $(".c1").click(function(){
-                    $("html,body").animate({scrollTop:c1p},1000);
+                    $("html,body").animate({scrollTop:c1p},500);
                     return false;
                 });
                 $(".c2").click(function(){
-                    $("html,body").animate({scrollTop:c2p},1000);
+                    $("html,body").animate({scrollTop:c2p},500);
                     return false;
                 });
                 $(".c3").click(function(){
-                    $("html,body").animate({scrollTop:c3p},1000);
+                    $("html,body").animate({scrollTop:c3p},500);
                     return false;
                 });
                 $(".c4").click(function(){
-                    $("html,body").animate({scrollTop:c4p},1000);
+                    $("html,body").animate({scrollTop:c4p},500);
                     return false;
                 });
                 $(".c5").click(function(){
-                    $("html,body").animate({scrollTop:c5p},1000);
+                    $("html,body").animate({scrollTop:c5p},500);
                     return false;
                 });
                 $(".c6").click(function(){
-                    $("html,body").animate({scrollTop:c6p},1000);
+                    $("html,body").animate({scrollTop:c6p},500);
                     return false;
                 });
                 $(".c7").click(function(){
-                    $("html,body").animate({scrollTop:c7p},1000);
+                    $("html,body").animate({scrollTop:c7p},500);
                     return false;
                 });
                 $(".c8").click(function(){
-                    $("html,body").animate({scrollTop:c8p},1000);
+                    $("html,body").animate({scrollTop:c8p},500);
                     return false;      
                 }); 
                             
@@ -113,7 +113,27 @@
                     }
                 );    
                 //포폴 디자인 부분 메뉴바 
-                
+                $(".lis").click(
+                    function(){
+                        $("div:contains('상세페이지'),div:contains('card')").addClass("hide");
+                        $("div").not("div:contains('상세페이지'),div:contains('card')").removeClass("hide");
+                        return false; // a태그를 클릭시 새로고침되지 않게 처리
+                    }
+                );
+                $(".lid").click(
+                    function(){
+                        $("div:contains('썸네일'),div:contains('card')").addClass("hide");
+                        $("div").not("div:contains('썸네일'),div:contains('card')").removeClass("hide");
+                        return false; // a태그를 클릭시 새로고침되지 않게 처리
+                    }
+                );
+                $(".coding").click(
+                    function(){
+                        $("li:contains('web'),li:contains('photoshop')").addClass("hide");
+                        $("li").not("li:contains('web'),li:contains('photoshop')").removeClass("hide");
+                        return false; // a태그를 클릭시 새로고침되지 않게 처리
+                    }
+                );
                 
                 // 포폴 디자인 썸네일 부분 넘기기
                 
@@ -173,9 +193,9 @@
         );
         
     </script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script>
     $(document).ready(
         function(){
@@ -187,14 +207,22 @@
                 asNavFor: '.videocontents1'
             });
             $('.videocontents1').slick({
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 asNavFor: '.videocontents',
                 dots: true,
                 centerMode: true,
                 focusOnSelect: true
             });
+            $('.somcontents').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
         }
+        
     );
     </script>
      <link rel="stylesheet" href="css/main.css">
@@ -390,10 +418,10 @@
                             <h3>썸네일<span class="block"></span><span>08</span></h3>
                         </div>
                     </div>
-                    <span class="button">
+                    <!-- <span class="button">
                         <a href="">이전</a>
                         <a href="">다음</a>
-                    </span>    
+                    </span>     -->
                 </div>
                 <div class="detail">
                     <div class="detailcontents">
