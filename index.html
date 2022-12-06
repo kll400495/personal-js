@@ -113,24 +113,25 @@
                     }
                 );    
                 //포폴 디자인 부분 메뉴바 
+                $(".detailcontents, .card").hide();
                 $(".lis").click(
                     function(){
-                        $("div:contains('상세페이지'),div:contains('card')").addClass("hide");
-                        $("div").not("div:contains('상세페이지'),div:contains('card')").removeClass("hide");
+                        $(".somcontents").show();
+                        $(".detailcontents, .card").hide();
                         return false; // a태그를 클릭시 새로고침되지 않게 처리
                     }
                 );
                 $(".lid").click(
                     function(){
-                        $("div:contains('썸네일'),div:contains('card')").addClass("hide");
-                        $("div").not("div:contains('썸네일'),div:contains('card')").removeClass("hide");
+                        $(".detailcontents").show();
+                        $(".somcontents, .card").hide();
                         return false; // a태그를 클릭시 새로고침되지 않게 처리
                     }
                 );
-                $(".coding").click(
+                $(".lic").click(
                     function(){
-                        $("li:contains('web'),li:contains('photoshop')").addClass("hide");
-                        $("li").not("li:contains('web'),li:contains('photoshop')").removeClass("hide");
+                        $(".card").show();
+                        $(".detailcontents, .somcontents").hide();
                         return false; // a태그를 클릭시 새로고침되지 않게 처리
                     }
                 );
